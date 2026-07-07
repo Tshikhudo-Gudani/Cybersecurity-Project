@@ -1,6 +1,4 @@
-import itertools
-import string
-import time
+import itertools,string,time
 
 PASSWORD = "ghtf"
 ALLOWED_CHARS = string.ascii_lowercase
@@ -42,9 +40,6 @@ def password_game():
 
             print("You guessed the password wrong!")
 
-        print("\nNow the brute-force solver will try the same password...")
-        guess, brute_attempts, brute_elapsed = brute_force_password(PASSWORD)
-        print(f"Brute-force found {guess!r} after {brute_attempts} attempts in {brute_elapsed:.2f} seconds.")
 
         continue_game = input("Do you want to play again? (y/n): ").lower()
         if continue_game != "y":
